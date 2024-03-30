@@ -46,4 +46,4 @@ To use FlexEx React, follow these simple steps:
 
 ## Documentation
 
-For more detailed documentation and advanced usage, visit our official [FlexEx Docs](https://github.com/akii09/FlexEx).
+For more detailed documentation and advanced usage, visit our official [FlexEx Docs](https://github.com/akii09/FlexEx#flexex-).
