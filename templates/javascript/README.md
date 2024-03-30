@@ -46,8 +46,4 @@ To use FlexEx Javascript, follow these simple steps:
 
 ## Documentation
 
-For more detailed documentation and advanced usage, visit our official [FlexEx Docs](https://github.com/akii09/flexex).
-
-## Contributing
-
-We welcome contributions from the community! If you find any issues or have suggestions for improvement, please feel free to open an issue or create a pull request.
+For more detailed documentation and advanced usage, visit our official [FlexEx Docs](https://github.com/akii09/FlexEx).
