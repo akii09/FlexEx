@@ -1,6 +1,7 @@
 # FlexEx 🚀
 
 FlexEx is a flexible and easy-to-use boilerplate for creating Chrome extensions with support for React, Vue, and plain JavaScript.
+FlexEx uses Vite, the lightning-fast build tool for modern web development, to power its development environment.
 
 ## Features
 
