@@ -83,7 +83,7 @@ function promptUser() {
             console.log(chalk.whiteBright('\nReady to start crafting your masterpiece? Here\'s how:\n'));
             console.log(chalk.cyan(`    📁 cd ${projectName}`));
             console.log(chalk.cyan('    💻 npm install'));
-            console.log(chalk.cyan('    🚀 npm start\n'));
+            console.log(chalk.cyan('    🚀 npm run dev\n'));
             console.log(chalk.whiteBright('For more tips and tricks, visit our docs: https://github.com/akii09/FlexEx#flexex-\n'));
         }
     });
