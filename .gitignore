@@ -33,3 +33,4 @@ templates/javascript/node_modules
 node_modules
 bin
 .npmignore
+npmignore
