@@ -46,7 +46,7 @@ To use FlexEx, follow these simple steps:
 
 ## Documentation
 
-For more detailed documentation and advanced usage, visit our [official documentation](https://github.com/akii09/FlrxEx/docs).
+For more detailed documentation and advanced usage, visit our [official documentation](https://github.com/akii09/FlexEx#flexex-).
 
 ## Contributing
 
