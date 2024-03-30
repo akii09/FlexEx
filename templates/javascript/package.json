@@ -1,0 +1,14 @@
+{
+  "name": "extify-js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite build && bun build ./background.js --outdir ./dist --watch",
+    "build": "vite build && bun build ./background.js --outdir ./dist",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

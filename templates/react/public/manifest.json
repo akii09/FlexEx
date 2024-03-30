@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Extify - React",
+    "version": "1.0.0",
+    "description": "Create chrome extension with Vue.js",
+    "permissions": [],
+    "background": {
+      "service_worker": "background.js"
+    },  
+    "action": {
+      "default_popup": "index.html"
+    },
+    "icons": {
+      "48": "assets/icon.png"
+    }
+  }
+  

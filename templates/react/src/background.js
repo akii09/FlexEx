@@ -1,0 +1,1 @@
+// This is the background script for the extension. It listens for messages from the content script and the popup.

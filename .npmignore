@@ -1,0 +1,16 @@
+# Exclude build files
+/build
+
+# Exclude development dependencies
+/node_modules
+
+# Exclude configuration files
+*.config.js
+
+# Exclude documentation files
+/docs
+
+# Exclude test files
+/test
+
+index.js
