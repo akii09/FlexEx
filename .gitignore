@@ -32,3 +32,4 @@ templates/javascript/dist
 templates/javascript/node_modules
 node_modules
 bin
+.npmignore
