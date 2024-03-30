@@ -15,7 +15,7 @@ To use FlexEx Javascript, follow these simple steps:
 
 1. **Create a new project:**
    ```bash
-   npm create flexex your-project-name
+   npm create flexex@latest
    ```
 
 2. **Navigate to your project directory:**
