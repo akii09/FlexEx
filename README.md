@@ -11,7 +11,7 @@ FlexEx is a flexible and easy-to-use boilerplate for creating Chrome extensions 
 
 ## Installation
 
-To use FlexEx Vue, follow these simple steps:
+To use FlexEx, follow these simple steps:
 
 1. **Create a new project:**
    ```bash
