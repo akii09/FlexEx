@@ -1,6 +1,6 @@
 {
   "name": "create-flexex",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "description": "Create a Chrome extension boilerplate with Vite + React, Vue, or Vanilla JavaScript",
   "bin": {
     "create-flexex": "./bin/cli.js"
@@ -10,7 +10,8 @@
     "scripts/",
     "templates/",
     "constants/",
-    "index.js"
+    "index.js",
+    "icons/"
   ],
   "type": "module",
   "main": "index.js",
