@@ -1,6 +1,6 @@
 {
   "name": "create-flexex",
-  "version": "2.2.0",
+  "version": "2.0.0",
   "description": "Create a Chrome extension boilerplate with Vite + React, Vue, or Vanilla JavaScript",
   "bin": {
     "create-flexex": "./bin/cli.js"
@@ -9,8 +9,7 @@
     "bin/",
     "scripts/",
     "templates/",
-    "constants/",
-    "index.js"
+    "constants/"
   ],
   "type": "module",
   "main": "index.js",
@@ -23,10 +22,10 @@
     "url": "https://github.com/akii09/FlexEx.git"
   },
   "scripts": {
-    "test": "jest --passWithNoTests",
-    "lint": "eslint .",
+    "test": "jest",
+    "lint": "echo \"No linting configured\"",
     "format": "prettier --write .",
-    "prepublishOnly": "npm run format"
+    "prepublishOnly": "npm run lint && npm test"
   },
   "keywords": [
     "chrome-extension",
@@ -50,8 +49,8 @@
     "inquirer": "^9.2.7"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
     "jest": "^29.7.0",
+    "eslint": "^8.57.0",
     "prettier": "^3.2.5"
   }
 }

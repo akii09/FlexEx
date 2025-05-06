@@ -31,6 +31,6 @@ templates/react/node_modules
 templates/javascript/dist
 templates/javascript/node_modules
 node_modules
-bin
+# bin
 .npmignore
 npmignore

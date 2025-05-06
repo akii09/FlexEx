@@ -1,33 +1,86 @@
-import inquirer from 'inquirer';
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import chalk from 'chalk';
-import { options } from './constants/options.js';
-import { createManifest, createBackgroundJs, copyIconsFolder } from './scripts/core-files.js';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import inquirer from "inquirer";
+import fs from "fs";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+import chalk from "chalk";
 
-export async function createProject() {
-  // Prompt for project details
-  const { projectName, template } = await inquirer.prompt(options);
-  // Scaffold Vite project
-  console.log(chalk.blue(`\nCreating Vite project with template "${template}"...`));
-  execSync(`npm create vite@latest ${projectName} -- --template ${template}`, { stdio: 'inherit' });
-  const projectPath = path.join(process.cwd(), projectName);
-  const publicDir = path.join(projectPath, 'public');
-  // Ensure public directory exists
-  fs.mkdirSync(publicDir, { recursive: true });
-  // Generate manifest.json
-  createManifest(projectName, projectPath);
-  // Create background.js
-  createBackgroundJs(projectName, projectPath);
-  // Copy icons folder to public directory
-  const iconsSourcePath = path.join(__dirname, 'icons');
-  copyIconsFolder(iconsSourcePath, projectPath);
-  console.log(chalk.green('\n✅ Chrome Extension project setup complete!'));
-  console.log(chalk.cyan(`\nNext steps:`));
-  console.log(chalk.cyan(`  cd ${projectName}`));
-  console.log(chalk.cyan('  npm install'));
-  console.log(chalk.cyan('  npm run dev\n'));
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const templates = {
+  React: path.join(__dirname, "templates", "react"),
+  Vue: path.join(__dirname, "templates", "vue"),
+  Javascript: path.join(__dirname, "templates", "javascript")
+};
+
+function copy(target, source) {
+  try {
+    if (fs.lstatSync(source).isDirectory()) {
+      fs.mkdirSync(target, { recursive: true });
+      fs.readdirSync(source).forEach((file) => {
+        copy(path.join(target, file), path.join(source, file));
+      });
+    } else {
+      fs.copyFileSync(source, target);
+    }
+  } catch (error) {
+    console.error(chalk.red(`Error copying files: ${error.message}`));
+    console.error(chalk.yellow("For more information, visit our docs: https://github.com/akii09/FlexEx#flexex-"));
+    process.exit(1);
+  }
+}
+
+const QUESTIONS = [
+  {
+    type: "input",
+    name: "name",
+    message: "What is your project name?",
+    default: "flex-ex"
+  },
+  {
+    type: "list",
+    name: "template",
+    message: "Which template would you like to use?",
+    choices: ["React", "Vue", "Javascript"]
+  }
+];
+
+async function promptUser() {
+  try {
+    const answers = await inquirer.prompt(QUESTIONS);
+    const projectName = answers.name.trim();
+    const targetPath = path.join(process.cwd(), projectName);
+
+    if (fs.existsSync(targetPath)) {
+      const { useAnotherName } = await inquirer.prompt({
+        type: "confirm",
+        name: "useAnotherName",
+        message: "Would you like to use another name?",
+        default: true
+      });
+
+      if (useAnotherName) {
+        return promptUser();
+      }
+      
+      console.log(chalk.green("Exiting..."));
+      process.exit(0);
+    }
+
+    fs.mkdirSync(targetPath, { recursive: true });
+    copy(targetPath, templates[answers.template]);
+
+    console.log(chalk.green("\n\n🚀 Project setup successful! Get ready to launch your extension! 🚀"));
+    console.log(chalk.whiteBright("\nReady to start crafting your masterpiece? Here's how:\n"));
+    console.log(chalk.cyan(`    📁 cd ${projectName}`));
+    console.log(chalk.cyan("    💻 npm install"));
+    console.log(chalk.cyan("    🚀 npm run dev\n"));
+    console.log(chalk.whiteBright("For more tips and tricks, visit our docs: https://github.com/akii09/FlexEx#flexex-\n"));
+  } catch (error) {
+    console.error(chalk.red(`Error: ${error.message}`));
+    process.exit(1);
+  }
+}
+
+export function createProject() {
+  return promptUser();
 }
