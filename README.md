@@ -1,7 +1,3 @@
-Here’s an updated and improved version of your README with a clearer structure, a step-by-step guide, and some new features:
-
----
-
 # FlexEx 🚀
 
 FlexEx is a modern and flexible boilerplate for building Chrome extensions. It provides seamless support for **React**, **Vue**, and **plain JavaScript** templates, all powered by **Vite** for fast and efficient development.
