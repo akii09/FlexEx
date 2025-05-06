@@ -51,14 +51,6 @@ npm run build
 
 This will generate a production-ready build inside the `dist` folder.
 
-Alternatively, for continuous development:
-
-```bash
-npm run dev
-```
-
-This command watches for changes and rebuilds automatically on each change.
-
 ### 5. Load Your Extension in Chrome
 
 To test your extension, load it in Chrome:
