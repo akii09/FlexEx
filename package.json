@@ -3,7 +3,7 @@
     "version": "1.1.0",
     "description": "Create Chrome extension boilerplate with React, Vue, or JavaScript",
     "bin": {
-        "create-flexex": "./bin/index.js"
+        "create-flexex": "./bin/cli.js"
     },
     "files": [
         "bin/index.js",
@@ -25,8 +25,7 @@
     },
     "scripts": {
         "test": "jest",
-        "prepublishOnly": "npm link",
-        "build": "bun build ./index.js --outdir ./build"
+        "prepublishOnly": "npm link"
     },
     "keywords": [
         "chrome",
