@@ -1,58 +1,87 @@
 # FlexEx 🚀
 
-FlexEx is a flexible and easy-to-use boilerplate for creating Chrome extensions with support for React, Vue, and plain JavaScript.
-FlexEx uses Vite, the lightning-fast build tool for modern web development, to power its development environment.
+FlexEx is a modern and flexible boilerplate for building Chrome extensions. It provides seamless support for **React**, **Vue**, and **plain JavaScript** templates, all powered by **Vite** for fast and efficient development.
 
-## Features
+## Key Features
 
-- **Multiple Templates:** Choose from React, Vue, or plain JavaScript templates to start building your Chrome extension.
-- **Flexible Configuration:** Customize your extension with ease using modern JavaScript frameworks.
-- **Hot Reloading:** Enjoy automatic hot reloading for faster development iterations.
-- **Simple Setup:** Get started quickly with simple installation steps.
+* **Multiple Templates**: Start your Chrome extension with React, Vue, or plain JavaScript templates.
+* **Vite-Powered**: Fast build tool that ensures efficient and quick development cycles.
+* **Hot Reloading**: Enjoy live reloading during development for a smoother experience.
+* **Minimal Configuration**: Get started in minutes with an easy setup and minimal configuration required.
 
-## Installation
+## Installation & Setup
 
-To use FlexEx, follow these simple steps:
+Follow these simple steps to get started with FlexEx:
 
-1. **Create a new project:**
-   ```bash
-   npm create flexex@latest
-   ```
+### 1. Create a New Project
 
-2. **Navigate to your project directory:**
-   ```bash
-   cd your-project-name
-   ```
+Run the following command to create a new project:
 
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+```bash
+npm create flexex@latest
+```
+
+### 2. Navigate to Your Project
+
+Change to the project directory:
+
+```bash
+cd your-project-name
+```
+
+### 3. Install Dependencies
+
+Install required dependencies:
+
+```bash
+npm install
+```
 
 ## Usage
 
-4. **Generate Build:**
-   ```bash
-   npm run build
-   ```
-   This command will generate a build inside the `dist` folder. Alternatively, you can use `npm run dev`, which watches for changes and automatically creates a build on every change.
+Once the setup is complete, here’s how you can start building your extension:
 
-5. **Load your extension in Chrome:**
-   1. Open Chrome browser.
-   2. Go to `chrome://extensions/` (Make sure you have enabled Developer mode).
-   3. Click on "Load unpacked" button.
-   4. Select the `build` directory inside your project.
+### 4. Generate the Build
 
-   Now you're all set to start coding your Vue extension! 🎉
+Run the following command to build your project:
+
+```bash
+npm run build
+```
+
+This will generate a production-ready build inside the `dist` folder.
+
+### 5. Load Your Extension in Chrome
+
+To test your extension, load it in Chrome:
+
+1. Open Chrome and navigate to `chrome://extensions/`.
+2. Enable **Developer Mode** (top right).
+3. Click **Load unpacked**.
+4. Select the `dist` folder inside your project directory.
+
+Your Chrome extension is now ready for development! 🎉
+
+## Additional Features & Improvements in v2.0.0
+
+* **CLI Tool**: FlexEx now includes a CLI tool to quickly scaffold new projects.
+* **Customizable Templates**: Easily extend or modify templates to fit your needs.
+* **Package Improvements**: Cleaned up dependencies and optimized for better performance.
 
 ## Documentation
 
-For more detailed documentation and advanced usage, visit our [official documentation](https://github.com/akii09/FlexEx#flexex-).
+For in-depth documentation, including advanced configurations and examples, visit our [official docs](https://github.com/akii09/FlexEx#readme).
 
 ## Contributing
 
-We welcome contributions from the community! If you find any issues or have suggestions for improvement, please feel free to open an issue or create a pull request.
+We welcome contributions from the community! If you have any suggestions, bug fixes, or improvements, feel free to open an issue or submit a pull request.
+
+### How to Contribute
+
+1. Fork the repository.
+2. Create a new branch for your feature/bugfix.
+3. Submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

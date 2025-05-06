@@ -1,0 +1,31 @@
+export const options = [
+  {
+    type: "input",
+    name: "projectName",
+    message: "Enter your project name:",
+    default: "my-extension",
+  },
+  {
+    type: "list",
+    name: "template",
+    message: "Select a Vite template:",
+    choices: [
+      "vanilla",
+      "vanilla-ts",
+      "vue",
+      "vue-ts",
+      "react",
+      "react-ts",
+      "svelte",
+      "svelte-ts",
+      "preact",
+      "preact-ts",
+      "lit",
+      "lit-ts",
+      "solid",
+      "solid-ts",
+      "qwik",
+      "qwik-ts",
+    ],
+  },
+];
